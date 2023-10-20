@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+/* General Styles 
+============================== */
+body {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        padding: 40px 20px;
+    }
+}
+
+/* Footer Styles 
+=============================== */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
