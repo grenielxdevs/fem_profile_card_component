@@ -7,25 +7,139 @@
     --dark-blue: hsl(229, 23%, 23%);
     --dark-grayish-blue: hsl(227, 10%, 46%);
     --dark-gray: hsl(0, 0%, 59%);
+    --light-gray: hsl(0, 0%, 89%);
+    --white: #ffffff;
 }
 
 /* General Styles 
 ============================== */
 body {
+    padding: 0;
+    margin: 0;
     font-size: 18px;
     font-weight: 400;
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-@media screen and (min-width: 375px) {
-    .container {
-        padding: 40px 20px;
-    }
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    background-color: var(--dark-cyan);
+    overflow: hidden;
+}
+
+.container::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background: url(./images/bg-pattern-top.svg) center no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    top: -50%;
+    left: -25%;
+}
+
+.container::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background: url(./images/bg-pattern-bottom.svg) center no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    bottom: -50%;
+    right: -25%;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.card .card-profiles .card-profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 120px;
+    background: url(./images/bg-pattern-card.svg) center no-repeat;
+    background-size: cover;
+    border-radius: 16px 16px 0 0;
+
+}
+
+.card .card-profiles .card-profile-image img {
+    position: relative;
+    bottom: -35%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+}
+
+.card .card-profiles .card-profile-content {
+    padding: 60px 20px 20px;
+}
+
+.card .card-profiles .card-profile-content h2 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card .card-profiles .card-profile-content h2 span {
+    margin-left: 10px;
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+
+.card .card-profiles .card-profile-content p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.card .card-details {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--light-gray);
+    border-radius: 0 0 16px 16px;
+    padding: 20px;
+}
+
+.card .card-details h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card .card-details p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--dark-gray);
+    text-align: center;
 }
 
 /* Footer Styles 
 =============================== */
-.attribution { 
+.attribution {
+    background-color: var(--dark-cyan);
+    padding: 10px;
     font-size: 11px; 
     text-align: center; 
 }
