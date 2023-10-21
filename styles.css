@@ -42,7 +42,7 @@ body {
     height: 100vh;
     width: 100vw;
     top: -50%;
-    left: -30%;
+    left: -25%;
 }
 
 .container::after {
@@ -54,7 +54,7 @@ body {
     height: 100vh;
     width: 100vw;
     bottom: -50%;
-    right: -30%;
+    right: -25%;
 }
 
 .card {
@@ -145,5 +145,5 @@ body {
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--white); 
 }
